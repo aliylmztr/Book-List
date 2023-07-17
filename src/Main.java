@@ -24,7 +24,7 @@ public class Main {
 
         List<Book> list = book.stream().filter(b -> b.getPageCount() > 100).toList();
         System.out.println("\nSayfa Sayısı 100'den Fazla Olan Kitaplar:");
-        list.forEach(b -> System.out.println("Kitap Adı: " + b.getName() + ", Yazar Adı: " + b.getPageCount()));
+        list.forEach(b -> System.out.println("Kitap Adı: " + b.getName() + ", Yazar Adı: " + b.getAuthorName() + ", Sayfa Sayısı: " + b.getPageCount()));
 
     }
 }
