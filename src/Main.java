@@ -22,9 +22,9 @@ public class Main {
         book.forEach(b -> map.put(b.getName(), b.getAuthorName()));
         map.forEach((bookName, authorName) -> System.out.println("Kitap Adı: " + bookName + ", Yazar Adı: " + authorName));
 
-        List<Book> newBook = book.stream().filter(b -> b.getPageCount() > 100).toList();
+        List<Book> list = book.stream().filter(b -> b.getPageCount() > 100).toList();
         System.out.println("\nSayfa Sayısı 100'den Fazla Olan Kitaplar:");
-        newBook.forEach(b -> System.out.println("Kitap Adı: " + b.getName() + ", Yazar Adı: " + b.getPageCount()));
+        list.forEach(b -> System.out.println("Kitap Adı: " + b.getName() + ", Yazar Adı: " + b.getPageCount()));
 
     }
 }
